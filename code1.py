@@ -7,19 +7,16 @@ def format_code(code):
     return formatted_code
 
 def main():
-    st.title("Code Indentation Formatter")
+    st.title("Code Indentation Formatter with autopep8")
 
     st.write("### Enter your code snippet below:")
     code = st.text_area("Code", height=300)
-
-    st.write("### Set the desired indentation level:")
-    indent_level = st.slider("Indentation Level", min_value=0, max_value=10, value=4)
 
     if st.button("Format Code"):
         if code:
             formatted_code = format_code(code)
             st.write("### Reformatted Code:")
-            st.code(formatted_code)
+            st.code(formatted_code, language='python')
         else:
             st.warning("Please enter some code.")
 
