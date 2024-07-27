@@ -7,7 +7,8 @@ def format_code(code):
     return formatted_code
 
 def main():
-    st.title("Code Indentation Formatter with autopep8"
+    st.title("Code Indentation Formatter with autopep8")
+
     st.write("### Enter your code snippet below:")
     code = st.text_area("Code", height=300)
 
