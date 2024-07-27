@@ -2,8 +2,10 @@ import streamlit as st
 import autopep8
 
 def format_code(code):
-    """Format the given code using autopep8."""
-    formatted_code = autopep8.fix_code(code, options={'aggressive': 1})
+    """Format the given code using autopep8 with aggressive options."""
+    formatted_code = autopep8.fix_code(
+        code, options={'aggressive': 2, 'experimental': True}
+    )
     return formatted_code
 
 def main():
